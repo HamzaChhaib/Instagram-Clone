@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Fleur+De+Leah&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Rouge+Script&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(24, 24, 24);
+    width: 100%;
+    height: 100vh;
+}
+button{
+    width: 90px;
+    height: 30px;
+    font-size: 15px;
+    background-color: #303030;
+    color: white;
+    border: 1px solid white;
+    border-radius: 8px;
+    transition:all  0.2s ease-in;
+    display: none;
+}
+button:hover{
+    background-color: #999999;
+}
+button:active{
+    background-color: #5f5f5f;
+}
+.navbar{
+    position: fixed;
+    width: 20%;
+    height: 100vh;
+    border-right: 1px solid rgb(116, 116, 116);
+    color: aliceblue;
+}
+.logotitle{
+    font-family: "MonteCarlo", cursive;
+    position: relative;
+    font-weight: 100;
+    top: 20px;
+    left: 15%;
+    font-size: 20px;
+}
+.sidebarit{
+    cursor: pointer;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: "Host Grotesk", sans-serif;
+    font-weight: 400;
+    margin-top: 5%;
+    position: relative;
+    top: 50px;
+    width: 80%;
+    height: 40px;
+    border-radius: 12px;
+    transition: all 0.5 ease-in;
+}
+.sidebarit:hover{
+    background-color: #242424d7;
+}
+.sidebarit:active{
+    background-color: #303030;
+}
+.sidebarit h3{
+    position: relative;
+    top: 15%;
+    left: 6%;
+}
+.sidebarit i{
+    position: relative;
+    top: 25%;
+}
+.les-story{
+    display: flex;
+    width: 600px;
+    position: relative;
+    top: 30px;
+    left: 25%;
+    overflow-x: auto;
+    color: white;
+    font-family: "Host Grotesk", sans-serif;
+    font-size: 14px;
+    gap: 4%;
+}
+.storys img{
+    cursor: pointer;
+    position: relative;
+    left: 25%;
+    top: 3px;
+    border-radius: 50%;
+    padding: 4px; /* Border thickness */
+    background: conic-gradient(
+        from 180deg, 
+        #ff034f, #e6683c, #dc2743, #cc2366, #bc1888, #e1306c
+    );
+}
+.loader {
+    width: 60px;
+    aspect-ratio: 2;
+    ----_g: no-repeat radial-gradient(circle closest-side,#e1306c 90%,#0000);
+    ---_g: no-repeat radial-gradient(circle closest-side,#dc2743 90%,#0000);
+    --_g: no-repeat radial-gradient(circle closest-side,#e6683c 90%,#0000);
+    background: 
+      var(----_g) 0%   50%,
+      var(---_g) 50%  50%,
+      var(--_g) 100% 50%;
+    background-size: calc(100%/3) 50%;
+    animation: l3 1s infinite linear;
+  }
+  @keyframes l3 {
+      20%{background-position:0%   0%, 50%  50%,100%  50%}
+      40%{background-position:0% 100%, 50%   0%,100%  50%}
+      60%{background-position:0%  50%, 50% 100%,100%   0%}
+      80%{background-position:0%  50%, 50%  50%,100% 100%}
+}
+.post{
+    width: 470px;
+    height: 85vh;
+    position: relative;
+    top: 50PX;
+    left: 30%;
+    color: white;
+    font-family: "Host Grotesk", sans-serif;
+}
+.navpost{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8%;
+}
+.line{
+    width: 500px;
+    height: 2px;
+    position: relative;
+    top: 70PX;
+    left: 29%;
+    background-color: rgb(87, 87, 87);
+}
+.othersidebar{
+    font-family: "Host Grotesk", sans-serif;
+    position: absolute;
+    top: 5%;
+    left: 77%;
+    width: 20%;
+    height: 100vh;
+    color: aliceblue;
+}
+.profile{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.Suggesed{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: 20px;
+}
+footer{
+    width: 100%;
+    height: 8vh;
+    background-color: rgb(24, 24, 24);
+    border-top: 2PX SOLID rgba(80, 80, 80, 0.589);
+    z-index: 999;
+    position: fixed;
+    bottom: 0%;
+    display: none;
+}
+.item{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 25px;
+    color: white;
+    position: relative;
+    top: 25%;
+}
+@media only screen and (max-width: 768px){
+    body{
+        overflow-x: hidden;
+    }
+    .navbar{
+        border: none;
+        position: absolute;
+    }
+    .logotitle{
+        position: relative;
+        top: 1%;
+        font-size: 25px;
+    }
+    .sidebarit{
+        display: none;
+    }
+    .les-story{
+        position: relative;
+        left: 0;
+        top: 15%;
+        width: 100%;
+    }
+    .les-story img{
+        width: 70px;
+        height: 70px;
+    }
+    .storys h4{
+        font-size: 20px;
+    }
+    .post{
+        position: relative;
+        left: 2%;
+        top: 110px;
+        width: 100%;
+        overflow-x: hidden;
+    }
+    .line{
+        position: relative;
+        left: 0;
+        top: 130px;
+    }
+    .postformediaquery{
+        position: relative;
+        top: 60px;
+        width: 430px;
+    }
+    .secondlinefirmediaguery{
+        position: relative;
+        left: 0;
+        top: 60px;
+    }
+    .othersidebar{
+        display: none;
+    }
+    button{
+        display: inline;
+        position: absolute;
+        top: 40px;
+        right: 4%;
+    }
+    footer{
+        display: inline;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .navbar{
+        border: none;
+        position: absolute;
+    }
+    .logotitle{
+        position: relative;
+        top: 1%;
+        font-size: 25px;
+    }
+    .sidebarit{
+        display: none;
+    }
+    .othersidebar{
+        display: none;
+    }
+    button{
+        display: inline;
+        position: absolute;
+        top: 40px;
+        right: 4%;
+    }
+  }
+  
